@@ -93,8 +93,11 @@ class MaxHeap:
         return len(self._heap)
 
     def height(self):
-        """Return height of max heap."""
-        return ceil(log(self.size() + 1, 2))
+        """Return height of max heap.
+
+        Heaps are always 'balanced' so we can get the height of the tree from the size.
+        """
+        return ceil(log(self.size() + 1, 2)) - 1  # O(lg(n)) but have to account for off-by-one error.
 
     def increase_key(self, index, new_key):
         """Increase the key at index to new_key.
@@ -146,12 +149,12 @@ class MaxHeap:
         num_keys = 1
         index = 0
 
-        for h in range(height, 0, -1):
-            print(" " * spaces[h - 1], end="")
+        for h in range(height, -1, -1):
+            print(" " * spaces[h], end="")
             for i in range(num_keys):
                 if index >= self.size():
                     break  # Break if we've printed all keys.
-                num_spaces = " " * spaces[h]
+                num_spaces = " " * spaces[h + 1]
                 print(str(self._heap[index]) + num_spaces, end="")
                 index += 1
 

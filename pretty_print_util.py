@@ -1,9 +1,9 @@
 
 def get_spaces_array(height):
     """Return list for number of spaces per tree height (for pretty printing)."""
-    memo = [0] * (height + 1)  # Fill with '0's. '+ 1' because if height = 4 then spaces = memo[4].
+    memo = [0] * (height + 2)  # Fill with '0's. '+ 2' because info is useful for pretty printing.
     if height > 0:
-        memo[0] = 2  # Arbitrary base case
+        memo[0] = 2  # Arbitrary base case (2 rows of slashes between nodes at heights 1 and 0).
     _get_spaces_array_helper(len(memo), memo)
     return memo
 
@@ -36,9 +36,9 @@ def print_slashes(h, spaces, num_keys):
     :param spaces: Spaces array (get by calling get_spaces_array())
     :param num_keys: The number of keys at height h of the tree.
     """
-    if h >= 2:
-        num_rows = spaces[h - 2]
-        num_spaces = spaces[h - 1]
+    if h >= 1:
+        num_rows = spaces[h - 1]
+        num_spaces = spaces[h]
         before = num_spaces - 1
         after = 0
         for row in range(num_rows):
