@@ -1,5 +1,5 @@
 from math import log, ceil, floor
-from pretty_print_util import get_spaces_array
+from pretty_print_util import get_spaces_array, print_slashes
 
 
 class MaxHeap:
@@ -156,20 +156,5 @@ class MaxHeap:
                 index += 1
 
             print()
-            if h >= 2:
-                MaxHeap.print_slashes(spaces[h - 2], spaces[h - 1], num_keys)
-
+            print_slashes(h, spaces, num_keys)
             num_keys *= 2  # The number of keys doubles each level.
-
-    @staticmethod
-    def print_slashes(num_rows, num_spaces, num_keys):
-        before = num_spaces - 1
-        after = 0
-        for row in range(num_rows):
-            for e in range(num_keys):
-                left = " " * before + "/" + " " * after
-                right = " " * after + "\\" + " " * before
-                print(left + " " + right + " ", end="")
-            print()
-            before -= 1
-            after += 1
