@@ -15,7 +15,7 @@ def maxheap(file, pretty_print, sort):
 
     \b
     Arguments:
-      FILE -- Integers separated by newlines.
+      FILE -- Non-negative integers separated by newlines.
     """
     try:
         input_array = [int(i) for i in file.read().split()]
