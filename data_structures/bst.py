@@ -1,4 +1,4 @@
-from pretty_print_util import get_spaces_array, print_slashes
+from util.pretty_print import get_spaces_array, print_slashes
 
 
 class Node:

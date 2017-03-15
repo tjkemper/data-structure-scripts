@@ -1,4 +1,4 @@
-from bst import BST
+from data_structures.bst import BST
 
 
 class AVL(BST):
