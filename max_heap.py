@@ -3,18 +3,18 @@ from pretty_print_util import get_spaces_array, print_slashes
 
 
 class MaxHeap:
-    """A max heap with all the fixings.
+    """A max heap (of non-negative integers) with all the fixings.
 
     Attributes:
-        _heap   The max heap.
+        _heap (list): The max heap.
     """
 
-    def __init__(self, array):
+    def __init__(self, integers):
         """Initialize max heap.
 
-        :param array: an array (of non-negative numbers) to make a max heap.
+        :param integers: a list (of integers) to make a max heap.
         """
-        self._heap = array
+        self._heap = integers
         self.build_max_heap()
 
     def build_max_heap(self):
@@ -38,7 +38,7 @@ class MaxHeap:
             self.max_heapify(self.right(index))
 
     def swap(self, i1, i2):
-        """Swap keys at index i1 and i2"""
+        """Swap keys at index i1 and i2."""
         temp = self._heap[i1]
         self._heap[i1] = self._heap[i2]
         self._heap[i2] = temp
@@ -102,7 +102,7 @@ class MaxHeap:
     def increase_key(self, index, new_key):
         """Increase the key at index to new_key.
 
-        :param index: The key to increase.
+        :param index:    The key to increase.
         :param new_key:  The new value.
         """
         if self._heap[index] < new_key:  # check if we're increasing the key at index.
@@ -117,11 +117,11 @@ class MaxHeap:
         self.increase_key(self.size() - 1, key)
 
     def sorted_array(self):
-        """Return sorted array. Empties heap."""
-        sorted_array = []
+        """Return sorted list. Empties heap."""
+        sorted_list = []
         for i in range(self.size()):
-            sorted_array.append(self.extract_max())
-        return sorted_array
+            sorted_list.append(self.extract_max())
+        return sorted_list
 
     @staticmethod
     def left(index):
