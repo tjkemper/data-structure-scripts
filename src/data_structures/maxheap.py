@@ -1,6 +1,6 @@
 from math import log, ceil, floor
 
-from util.pretty_print import get_spaces_array, print_slashes
+from src.util.pretty_print import get_spaces_array, print_slashes
 
 
 class MaxHeap:

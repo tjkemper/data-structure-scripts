@@ -10,7 +10,7 @@ setup(
     ],
     entry_points='''
         [console_scripts]
-        maxheap=cli:maxheap
-        avl=cli:avl
+        maxheap=src.cli.commands:maxheap
+        avl=src.cli.commands:avl
     ''',
 )
