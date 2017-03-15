@@ -1,6 +1,6 @@
 import click
 from data_structures.avl import AVL
-from data_structures.max_heap import MaxHeap
+from data_structures.maxheap import MaxHeap
 
 
 @click.command()
