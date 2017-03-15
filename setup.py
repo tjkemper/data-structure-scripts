@@ -11,5 +11,6 @@ setup(
     entry_points='''
         [console_scripts]
         maxheap=cli:maxheap
+        avl=cli:avl
     ''',
 )
