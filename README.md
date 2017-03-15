@@ -3,8 +3,8 @@
 Python scripts leveraging data structures.
 
 ### Data Structures
-* Max Heap
-* AVL Tree
+* [Max Heap](#maxheap-usage)
+* [AVL Tree](#avl-usage)
 
 ### Setup
 install `virtualenv`
