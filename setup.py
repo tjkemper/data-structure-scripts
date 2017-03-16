@@ -3,8 +3,12 @@ from setuptools import setup, find_packages
 setup(
     name='data_structure_scripts',
     version=0.1,
-    #packages=find_packages(),
-    #include_package_data=True,
+    description='CLI for data structures.',
+    author='Taylor Kemper',
+    author_email='tjkemper6@gmail.com',
+    url='https://github.com/tjkemper/data-structure-scripts',
+    packages=find_packages(exclude=('tests')),
+    include_package_data=True,
     install_requires=[
         'Click',
     ],
