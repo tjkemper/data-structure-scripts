@@ -1,36 +1,41 @@
 # Data Structure Scripts
 
-Python scripts leveraging data structures.
+CLI for data structures.
 
 ### Data Structures
 * [Max Heap](#maxheap-usage)
 * [AVL Tree](#avl-usage)
 
 ### Setup
-install `virtualenv`
+
+**Ensure you have `python3` and `pip3`**
 
 ```
-pip3 install virtualenv
+python3 --version
+pip3 --version
 ```
 
-create virtual environment (ensure you are in root of repo).
+**Clone repository.**
 
 ```
-virtualenv venv
+git clone https://github.com/tjkemper/data-structure-scripts.git
+cd data-structure-scripts/
+```
+
+**`make` all the things!** *(Sets up virtual environment)*
+
+```
+make
+```
+
+**Activate virtual environment.**
+
+```
 . venv/bin/activate
-pip install --editable .
 ```
-
-### More on `virtualenv`
-specify any python version for virtualenv.
-
-```
-virtualenv -p `which python3.6` venv
-```
-
 
 ### Teardown
-Go back to the *real* world.
+**Deactivate virtual environment.** *(Go back to the real world)*
 
 ```
 deactivate
