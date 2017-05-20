@@ -6,4 +6,4 @@ init:
 
 test:
 	. venv/bin/activate; \
-	py.test tests/
+	pytest tests/
