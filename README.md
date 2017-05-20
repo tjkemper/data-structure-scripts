@@ -70,7 +70,7 @@ maxheap --help
 # `avl` usage
 
 **Return sorted list (ascending).**
-* Accompished by doing an **in order** traversal of the AVL tree.
+* Accomplished by doing an **in order** traversal of the AVL tree.
 
 ```
 avl input1.txt
